@@ -1,0 +1,30 @@
+kmp:
+  type: article
+  title: Fast pattern-matching in strings
+  author: ["Knuth, Donald", "Morris, James", "Pratt, Vaughan"]
+  date: 1977
+
+aht:
+  type: article
+  title: Where to Use and How not to Use Polynomial String Hashing
+  author: ["Pachocki, Jacob", "Radoszewski, Jacob"]
+  date: 2013
+
+compcodehandbook:
+  type: book
+  title: Guide to competitive programming
+  author: Laaksonen, Antti
+  date: 2017
+  publisher: Springer
+
+lazy:
+  type: web
+  title: Segment Tree
+  author: Kogler, Jacob
+  url: https://cp-algorithms.com/data_structures/segment_tree.html
+
+flt:
+  type: article
+  title: On Fermat's little theorem
+  author: Bishop, Robert E.
+  url: https://math.uchicago.edu/~may/VIGRE/VIGRE2008/REUPapers/Bishop.pdf
