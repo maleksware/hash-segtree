@@ -103,7 +103,7 @@ This observation makes it possible to handle the point update problem: when an e
 
 = Segment tree modification for range updates
 
-The current variant of our segment tree can only handle point updates. The range updates can only be done by updating the elements one by one, which takes $O(n log(n))$ per range update query. There has been found a modification @lazy for the segment trees which makes it possible to handle range updates by storing some additional information of what has to be stored in the nodes and using it when necessary. When the range is updated, all segments that are fully in this range are assigned a value for that update query. This value is later used if the segment is a part of the hash query. A $"push(l, r)"$ function is defined to update the children's assigned values if the children's hash values have to be updated separately. This allows to keep the complexity at $O(log(n))$ per update and hash queries, because some unused assigned values get discarded in the process if not used. See implementations (Appendix 1) for more details.
+The current variant of our segment tree can only handle point updates. The range updates can only be done by updating the elements one by one, which takes $O(n log(n))$ per range update query. There has been found a modification @lazy for the segment trees which makes it possible to handle range updates by storing some additional information of what has to be stored in the nodes and using it when necessary. When the range is updated, all segments that are fully in this range are assigned a value for that update query. This value is later used if the segment is a part of the hash query. A $"push(l, r)"$ function is defined to update the children's assigned values if the children's hash values have to be updated separately. This allows to keep the complexity at $O(log(n))$ per update and hash queries, because some unused assigned values get discarded in the process if not used. See implementations #footnote[The implementations are on https://github.com/maleksware/hash-segtree.] for more details.
 
 The main problem of this modification comes from the necessity to recompute the hash of a node that has been updated such that all leaves in its subtree contain the same letter. In other words, we have to compute the hash of a string of the same letters, knowing only the letter and the length of the string. My solution can compute this in $O(log(k))$ time, where $k$ is the length of the string. This complexity is later optimised to just $O(1)$ using precomputation.
 
@@ -168,6 +168,8 @@ The tests themselves only contain hash computing, without actually comparing the
 == Specific implementation details
 
 All implementations use a single-hash technique. This means they're not completely collision-proof @aht, but the tests are generated randomly and are unlikely to cause collisions. This has been done to keep the implementations readable and simple enough, but all of them are easily generalisable to use multiple hashes.
+
+#pagebreak()
 
 == Benchmarking results
 

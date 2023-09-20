@@ -56,7 +56,7 @@
       )
     } else {
       (
-        top: 100pt,
+        top: 90pt,
         left: 110pt,
         right: 110pt,
         bottom: 90pt,
