@@ -14,3 +14,5 @@ Each subproblem considered in the paper has its own folder. Each folder has the 
 The C++ implementations for the corresponding problem can be found in `implementations`. Note that to run the tests yourself, you will have to compile the executables for your machine from source. Please refer to the source code of `_run-tests.py` to see the folder structure the scripts expect.
 
 The `measurements` folder contains the test results which have been obtained from the generated testset. It has been added here for reference and debugging. The actual results will be different depending on the CPU/OS. Those are the files from which all the plots in the paper have been produced. The format is as follows: `<test-size>,<qp/ln>,<time-in-milliseconds>`.
+
+All measurements have been taken on a Windows machine with Intel Core i5 11th Gen, with the Power mode enabled and no limitations on battery usage.
